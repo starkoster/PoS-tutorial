@@ -1,4 +1,4 @@
-# clean_up()
+# PoSTutorial::clean_up()
 library(PoSTutorial)
 library(clintrialx)
 library(dplyr)
@@ -6,6 +6,7 @@ library(httr)
 library(jsonlite)
 library(purrr)
 library(tidyr)
+library(tidyverse)
 
 # Fetch data from clinicaltrials.gov----
 mmds <- get_studies(add_data = TRUE)
