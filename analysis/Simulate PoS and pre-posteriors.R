@@ -92,7 +92,7 @@ clean_up()
   idx1 = which(y1<y2)
   idx2 = which(y2<=y1)
   y3 = c(y1[idx1],y2[idx2])
-  polygon(c(ds,rev(ds)), c(y3, rep(0,length(ds))), border=NA, col=add_alpha('magenta',.25))
+  polygon(c(ds,rev(ds)), c(y3, rep(0,length(ds))), border=NA, col=add_alpha('purple',.25))
 
   cat("Pre-posterior overlap is", round(sum(y3)*ddt,3))
 

@@ -9,15 +9,13 @@ sim_continuous(n, delta_prior, sigma_prior, arms = 2, nsim = 1000)
 \arguments{
 \item{n}{Sample size, provided as a scalar or vector}
 
-\item{delta_prior}{Prior mean, either scalar (for normal distributed) or 'rdist' type function}
+\item{delta_prior}{Prior mean, either two scalars (mean, std.dev, for normal distributed) or 'rdist' type function}
 
-\item{sigma_prior}{Prior std.dev, either scalar (for normal distributed) or 'rdist' type function}
+\item{sigma_prior}{Prior std.dev, either scalar (for known variance) or 'rdist' type function}
 
 \item{arms}{Number of trial arms}
 
 \item{nsim}{Number of trial simulations}
-
-\item{sigma}{Assumed std.dev., provided as a scalar or vector}
 }
 \value{
 2-column matrix with simulated true and observed effect sizes
@@ -27,7 +25,7 @@ Simulate trial with continuous outcome
 }
 \examples{
 # define priors for effect size and sigma
-dprior = function(x) rnorm(x, 2,2)
-gprior = function(x) rgamma(x, 6.5,1)
-sim_continuous(n=100, delta_prior=dprior, sigma_prior=gprior)
+dprior = function(x) rnorm(x, 2,2)      # for normal prior, this could also be specified as 'dprior = c(2,2)'
+sprior = function(x) rgamma(x, 6.5,1)   # if variance is known, then 'sprior = 6.5' is also valid
+sim_continuous(n=100, delta_prior=dprior, sigma_prior=sprior)
 }

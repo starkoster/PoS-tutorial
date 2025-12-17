@@ -1,9 +1,8 @@
 #' Simulate trial with continuous outcome
 #'
 #' @param n            Sample size, provided as a scalar or vector
-#' @param sigma        Assumed std.dev., provided as a scalar or vector
-#' @param delta_prior  Prior mean, either scalar (for normal distributed) or 'rdist' type function
-#' @param sigma_prior  Prior std.dev, either scalar (for normal distributed) or 'rdist' type function
+#' @param delta_prior  Prior mean, either two scalars (mean, std.dev, for normal distributed) or 'rdist' type function
+#' @param sigma_prior  Prior std.dev, either scalar (for known variance) or 'rdist' type function
 #' @param arms         Number of trial arms
 #' @param nsim         Number of trial simulations
 #'
@@ -11,9 +10,9 @@
 #'
 #' @examples
 #' # define priors for effect size and sigma
-#' dprior = function(x) rnorm(x, 2,2)
-#' gprior = function(x) rgamma(x, 6.5,1)
-#' sim_continuous(n=100, delta_prior=dprior, sigma_prior=gprior)
+#' dprior = function(x) rnorm(x, 2,2)      # for normal prior, this could also be specified as 'dprior = c(2,2)'
+#' sprior = function(x) rgamma(x, 6.5,1)   # if variance is known, then 'sprior = 6.5' is also valid
+#' sim_continuous(n=100, delta_prior=dprior, sigma_prior=sprior)
 
 
 sim_continuous <- function(n, delta_prior, sigma_prior, arms = 2, nsim = 1e3){

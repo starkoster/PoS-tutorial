@@ -47,3 +47,23 @@ ci2sd <- function(ci, n=1, ci_level = 0.95){
 
   return(out)
 }
+
+#' Approximate standard error from data range
+#'
+#' @param lo    Lowest observation
+#' @param hi    highest observation
+#' @param smax  max standard devation to look for
+#' @param eps   Precision value for
+#'
+#' @return standard deviation, scaled with sample size
+#'
+#' @examples
+#' # 95% confidence interval of [0,6], from 100 subjects:
+#' ci2sd(c(0,6), n=100)
+#' # standard devation is 15.3064
+#'
+range2sd <- function(lo, up, smax = 10, eps = 1e-4){
+
+  out = optimize(\(sd) (abs(up-lo)/2-qnorm(1-eps, sd=sd))^2, c(eps,smax))$minimum
+  return(out)
+}
