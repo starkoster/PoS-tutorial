@@ -1,0 +1,2 @@
+"pr_drug_red_em_gt_threshold","pr_drug_red_cm_gt_threshold","pr_active_red_em_gt_threshold","pr_active_red_cm_gt_threshold","min_post_active_em","min_post_active_cm","max_baseline_em","max_baseline_cm"
+0,0,1e-05,9e-05,0.207788413756606,1.35832271783429,28.9691622643112,29.3870503500487

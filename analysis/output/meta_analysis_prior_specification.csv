@@ -1,0 +1,7 @@
+"eta","clinical_quantity","clinical_median_input","eta_mean","eta_mean_sd","between_study_eta_sd_halfnormal_scale","baseline_em_median","baseline_cm_median","pbo_red_em_median","pbo_red_cm_median","drug_red_em_median","drug_red_cm_median","active_red_em_median","active_red_cm_median"
+"eta1","EM baseline MMD as fraction of 30",10,-0.693147180559945,0.6,0.4,10,15,0.5,1,0.5,1,1,2
+"eta2","CM baseline excess as fraction of remaining MMD range",5,-1.09861228866811,0.6,0.4,10,15,0.5,1,0.5,1,1,2
+"eta3","EM total active/reference reduction as fraction of EM baseline",0.1,-2.19722457733622,0.6,0.45,10,15,0.5,1,0.5,1,1,2
+"eta4","CM total active/reference excess as fraction of available CM range",0.0714285714285714,-2.56494935746154,0.6,0.45,10,15,0.5,1,0.5,1,1,2
+"eta5","EM placebo reduction as fraction of EM total active/reference reduction",0.5,0,0.6,0.45,10,15,0.5,1,0.5,1,1,2
+"eta6","CM placebo excess as fraction of EM-to-CM total active/reference excess",0.5,0,0.6,0.45,10,15,0.5,1,0.5,1,1,2

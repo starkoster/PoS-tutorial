@@ -1,0 +1,4 @@
+"metric","probability"
+"dose_response_significant",0.9828
+"any_dose_effect_ge_2",0.7762
+"phase2_go",0.7762

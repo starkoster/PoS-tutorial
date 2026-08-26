@@ -1,17 +1,18 @@
-Package: PoSTutorial
+Package: MigraineEmaxSim
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Authors@R: c(
-    person(
-      "Jane", "Doe",
-      email = "jane@example.com",
-      role = c("aut", "cre")
-    )
-  )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Title: Bayesian Emax Modeling and Migraine Development Program Simulation
+Version: 0.3.1
+Authors@R: person(given = "Clinical", family = "Modeling", role = c("aut", "cre"), email = "clinical.modeling@example.com")
+Description: Utilities for fitting constrained Bayesian historical meta-analytic priors, fitting an ED50 Emax model to the HOPE trial, and simulating two migraine development programs. The historical meta-analysis ignores numerical historical dose values because they are from different drugs. The included CSV is provided in data/ and inst/extdata/. Baseline MMD means and SDs are included as a baseline likelihood in both the historical meta-analysis and the HOPE Emax model.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.3.3
+Roxygen: list(markdown = TRUE)
+Imports:
+    stats,
+    utils,
+    posterior,
+    cmdstanr
+Suggests:
+    testthat
+Config/roxygen2/version: 8.0.0

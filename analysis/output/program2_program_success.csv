@@ -1,0 +1,5 @@
+"endpoint","threshold","p_phase2_go","p_p3_both_success_given_go","p_overall_program_success"
+"significance_only",NA,0.7762,0.754187065189384,0.5854
+"significant_and_observed_effect_threshold",2,0.7762,0.276475135274414,0.2146
+"significant_and_observed_effect_threshold",3,0.7762,0.0280855449626385,0.0218
+"significant_and_observed_effect_threshold",4,0.7762,0,0
