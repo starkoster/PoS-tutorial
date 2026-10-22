@@ -1,7 +1,0 @@
-source(file.path(if (dir.exists("analysis")) "analysis" else ".", "_setup.R"))
-priors <- default_eta_priors()
-utils::write.csv(eta_prior_table(priors), file.path(out_dir, "meta_analysis_prior_specification.csv"), row.names = FALSE)
-prior_pred <- simulate_eta_prior(priors, n = 200000, seed = 123)
-checks <- prior_predictive_summary(prior_pred, threshold = 15)
-print(checks)
-utils::write.csv(checks, file.path(out_dir, "prior_predictive_checks.csv"), row.names = FALSE)

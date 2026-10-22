@@ -1,18 +1,20 @@
 Package: MigraineEmaxSim
 Type: Package
-Title: Bayesian Emax Modeling and Migraine Development Program Simulation
-Version: 0.3.1
-Authors@R: person(given = "Clinical", family = "Modeling", role = c("aut", "cre"), email = "clinical.modeling@example.com")
-Description: Utilities for fitting constrained Bayesian historical meta-analytic priors, fitting an ED50 Emax model to the HOPE trial, and simulating two migraine development programs. The historical meta-analysis ignores numerical historical dose values because they are from different drugs. The included CSV is provided in data/ and inst/extdata/. Baseline MMD means and SDs are included as a baseline likelihood in both the historical meta-analysis and the HOPE Emax model.
+Title: Readable Bayesian Migraine Analysis and Development Simulations
+Version: 0.5.3
+Authors@R: person("Analysis", "Maintainer", email = "maintainer@example.com",
+    role = c("aut", "cre"))
+Description: A four-stage workflow for elicited-prior calibration, a constrained
+    historical meta-analysis in Stan, a drug-specific Emax update in Stan,
+    and simulations of direct and staged development programs. Phase 2 and
+    Phase 3 have separate, commented functions. Multiple contrast testing uses
+    DoseFinding. All changes and treatment effects are negative for improvement.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
-Roxygen: list(markdown = TRUE)
-Imports:
-    stats,
-    utils,
-    posterior,
-    cmdstanr
-Suggests:
-    testthat
+Depends: R (>= 4.1.0)
+Imports: dplyr (>= 1.0.0), tidyr (>= 1.1.0), purrr (>= 1.0.0),
+    tibble, readr, ggplot2 (>= 3.4.0), DoseFinding (>= 1.0.0), posterior,
+    stats, utils
+Suggests: cmdstanr
+Additional_repositories: https://stan-dev.r-universe.dev
 Config/roxygen2/version: 8.0.0

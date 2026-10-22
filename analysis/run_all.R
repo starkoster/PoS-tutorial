@@ -1,22 +1,10 @@
-source(file.path(if (dir.exists("analysis")) "analysis" else ".", "_setup.R"))
+# Run from the extracted package directory after installing version 0.5.3.
+# The four scripts can also be sourced separately, pausing between stages.
 
-result <- run_full_analysis(
-  root = pkg_root,
-  csv_path = file.path(pkg_root, "data", "hist_trials.csv"),
-  output_dir = out_dir,
-  n_program_sims = 5000,
-  use_historical_active = TRUE,
-  active_borrow_weight = 0.50,
-  ed50_median = 20,
-  ed50_lower = 10,
-  ed50_upper = 100
-)
+source("analysis/01_calibrate_prior.R")
 
-print(result$prior_checks)
-print(result$prog1$significance_only)
-print(result$prog1$threshold_program_success)
-print(result$prog2$phase2_summary)
-print(result$prog2$selection_summary)
-print(result$prog2$program_success)
+source("analysis/02_historical_meta.R")
 
+source("analysis/03_hope_update.R")
 
+source("analysis/04_programs.R")
